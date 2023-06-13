@@ -20,10 +20,10 @@ const TOKEN_PATH = 'token.json';
 const credentials = {
   client_id: process.env.clientid,
   client_secret: process.env.secret,
-  auth_uri:'https://accounts.google.com/o/oauth2/auth',
-token_uri:'https://oauth2.googleapis.com/token',
-auth_provider_x509_cert_url:'https://www.googleapis.com/oauth2/v1/certs',
-  redirect_uris: ['https://localhost:3000/auth/callback']
+  auth_uri:process.env.auth,
+token_uri:process.env.token,
+auth_provider_x509_cert_url:process.env.pro,
+  redirect_uris: [process.env.uri]
 };
 
 const oAuth2Client = new google.auth.OAuth2(
